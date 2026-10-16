@@ -1,0 +1,101 @@
+body {
+  background: #141311;
+}
+
+.cfl {
+  --cfl-ivory: #141311;
+  --cfl-ivory-rgb: 20 19 17;
+  --cfl-paper: #1b1e21;
+  --cfl-sage: #2a2e31;
+  --cfl-moss: #353b22;
+  --cfl-ink: #ece6d8;
+  --cfl-ink-rgb: 236 230 216;
+  --cfl-red: #d0182f;
+  --cfl-red-rgb: 208 24 47;
+  --cfl-red-hover: #a8101f;
+  --cfl-red-soft: #ff6f61;
+  --cfl-on-red: #fff;
+  --cfl-on-band: #ece6d8;
+  --cfl-on-band-rgb: 236 230 216;
+  --cfl-glow: #1f2326;
+  --cfl-display: 'Big Shoulders Display', Impact, 'Arial Narrow', sans-serif;
+  --cfl-stencil: 'Big Shoulders Stencil Display', 'Big Shoulders Display', Impact, sans-serif;
+  --cfl-body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --cfl-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+}
+
+.cfl-display {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.9;
+}
+
+.cfl-display em {
+  font-family: var(--cfl-stencil);
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* The photos' dark backdrops are lit from the left; a softer mask hides the frame edge. */
+.cfl-hero__frame {
+  -webkit-mask-image: radial-gradient(closest-side, #000 50%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 50%, transparent 100%);
+}
+
+.cfl-hero__title {
+  font-size: clamp(3.4rem, 9.4vw, 9.8rem);
+}
+
+.cfl-hero__wordmark,
+.cfl-closing__wordmark {
+  font-family: var(--cfl-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cfl-chapter__num span:first-child {
+  font-family: var(--cfl-stencil);
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.cfl-roast__name {
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
+}
+
+/* Subtle diagonal hazard texture on the bands. */
+.cfl-marquee,
+.cfl-closing {
+  background-image: repeating-linear-gradient(-45deg, rgb(0 0 0 / 0.06) 0 14px, transparent 14px 28px);
+}
+
+/* Concept label: makes clear this is a pitch, not the live store. */
+.cfl-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-block-size: 36px;
+  padding: 6px 16px;
+  background: #0b0c0d;
+  color: rgb(236 230 216 / 0.75);
+  font: 500 0.7rem/1.3 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cfl-ribbon::before {
+  content: '';
+  flex: none;
+  inline-size: 7px;
+  block-size: 7px;
+  border-radius: 50%;
+  background: #d0182f;
+}
+
+.cfl-cartbtn {
+  inset-block-start: 48px;
+}
